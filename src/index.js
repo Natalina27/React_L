@@ -1,6 +1,7 @@
+//Core
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+//Core Component
 import { App } from './app';
 import reportWebVitals from './reportWebVitals';
 
