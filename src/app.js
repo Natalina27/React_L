@@ -1,5 +1,10 @@
+//Core
 import React from 'react';
+//Component
+import { News } from './components/news';
 
-export const App = () => <h1>React Lectrum</h1>;
+export const App = () => < News />;
+
+
 
 

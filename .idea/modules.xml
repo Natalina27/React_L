@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/react_lectrum.iml" filepath="$PROJECT_DIR$/.idea/react_lectrum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/React_L.iml" filepath="$PROJECT_DIR$/.idea/React_L.iml" />
     </modules>
   </component>
 </project>
