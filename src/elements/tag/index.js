@@ -3,11 +3,11 @@ import React from 'react';
 //Styles
 import Styles from './styles.module.scss';
 
-export const Tag = ({data}) => {
+export const Tag = ({source}) => {
     return(
         <>
             <div>
-                <span className={Styles.tag}>{data}</span>
+                <span className={Styles.tag}>{source}</span>
             </div>
         </>
 

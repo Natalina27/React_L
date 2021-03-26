@@ -3,5 +3,5 @@ import React from 'react';
 //Styles
 import Styles from './styles.module.scss';
 
-export const LikesCounter = ({likes}) =>  <span className={Styles.likesCounter}>{likes}</span>;
+export const LikesCounter = ({counts}) =>  <span className={Styles.likesCounter}>{counts}</span>;
 

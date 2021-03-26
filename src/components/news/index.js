@@ -5,12 +5,13 @@ import { Article } from '../article';
 //Styles
 import Styles from './styles.module.scss';
 
-export const News = () => {
+
+export const News = ({source}) => {
+    const articleJSX = source.map(({id, ...props }) => <Article key={id} {...props}/> );
+
     return (
         <section className={Styles.news}>
-            < Article />
-            < Article />
-            < Article />
+            { articleJSX }
         </section>
     );
 };
