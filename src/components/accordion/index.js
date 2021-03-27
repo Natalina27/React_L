@@ -3,7 +3,7 @@ import Styles from './styles.module.scss';
 import { AccordionItem } from '../accordionItem';
 
 
-export const Accordion = ({db}) => {
+export const Accordion = ({db}, {title = 'Accordion'}) => {
 
     const [state, setState] = useState(db);
 
@@ -21,7 +21,7 @@ export const Accordion = ({db}) => {
     return (
         <>
             <section className={Styles.accordion}>
-                <h1>Accordion</h1>
+                <h1>{title}</h1>
                 {accordionItemJSX}
             </section>
         </>
