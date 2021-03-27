@@ -6,6 +6,7 @@ import { Article } from '../article';
 import Styles from './styles.module.scss';
 
 
+
 export const News = ({source}) => {
     const articleJSX = source.map(({id, ...props }) => <Article key={id} {...props}/> );
 
