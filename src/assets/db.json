@@ -1,0 +1,21 @@
+[
+    {
+        "id": "123",
+        "question": "What business are you doing?",
+        "answer": "In the past few years India has made attempts to get back several historic items. Some historians claim that the Kohinoor was taken away from India by force.",
+        "isOpen": false
+
+    },
+    {
+        "id": "456",
+        "question": "What business are you doing?",
+        "answer": "In the past few years India has made attempts to get back several historic items. Some historians claim that the Kohinoor was taken away from India by force.",
+        "isOpen": false
+    },
+    {
+        "id": "789",
+        "question": "What business are you doing?",
+        "answer": "In the past few years India has made attempts to get back several historic items. Some historians claim that the Kohinoor was taken away from India by force.",
+        "isOpen": false
+    }
+]

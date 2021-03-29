@@ -1,35 +1,54 @@
 //Core
 import React from 'react';
+
 //Components
 import { Tag } from '../../elements/tag';
 import { CommentCounter } from '../../elements/commentsCounter';
 import {LikesCounter} from '../../elements/likesCounter';
+
 //Styles
 import Styles from './styles.module.scss';
+import * as PropTypes from "prop-types";
 
-export const Article = () => {
+export const Article = ({image, title, tags, description, published, likes, comments}) => {
+
+    const tagJSX = tags.map(el => <Tag key={el} source={ el.toUpperCase()}/>);
+
     return (
         <section className={Styles.article}>
             <header>
                 <div className={Styles.poster}>
-                    <img src="https://miro.medium.com/max/1280/1*N6eYi8bOQ9tyZy8NGWDNKA.png" alt=""/>
+                    <img src={image} alt="article"/>
                 </div>
                 <div className={Styles.tags}>
-                    <Tag data={'Literature'}/>
-                    <Tag data={'Books'}/>
+                    { tagJSX }
                 </div>
             </header>
             <article>
-                <h1>American writer of bad cowboy stories arrived in</h1>
-                <p>Volunteering to help people in need combined with travelling to faraway places is a new </p>
+                <h1>{title}</h1>
+                 <p> {description}</p>
             </article>
             <footer>
-                <span>15.07.2017</span>
+                <span>{published}</span>
                 <div className={Styles.controls}>
-                   <CommentCounter comments={10}/>
-                   <LikesCounter likes={315} />
+                   <CommentCounter counts={comments} />
+                   <LikesCounter counts={likes} />
                 </div>
             </footer>
         </section>
     );
 };
+Article.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    published: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    comments: PropTypes.number.isRequired,
+    image: PropTypes.string,
+    tags: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string,
+            title: PropTypes.string
+        })
+    )
+}
