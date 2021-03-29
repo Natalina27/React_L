@@ -2,6 +2,7 @@
 import React from 'react';
 //Styles
 import Styles from './styles.module.scss';
+import * as PropTypes from 'prop-types';
 
 export const Tag = ({source}) => {
     return(
@@ -13,4 +14,8 @@ export const Tag = ({source}) => {
 
 
     );
+};
+
+Tag.propTypes = {
+    source: PropTypes.string.isRequired,
 };

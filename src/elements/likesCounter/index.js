@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 //Styles
 import Styles from './styles.module.scss';
+import * as PropTypes from "prop-types";
 
 export const LikesCounter = ({counts}) => {
     const [likes, setLikes] = useState(counts);
@@ -18,3 +19,7 @@ export const LikesCounter = ({counts}) => {
 
     )
 };
+
+LikesCounter.propTypes = {
+    counts: PropTypes.number.isRequired
+}
